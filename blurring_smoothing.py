@@ -22,12 +22,15 @@ while True:
 
     median = cv2.medianBlur(res,15)                                  #for most clarity
 
+    bilateral=cv2.bilateralFilter(res,15,75,75)                      #another blur
+
     cv2.imshow('frame',frame)                  
     cv2.imshow('mask',mask)
     cv2.imshow('res',res)
     cv2.imshow('smoothed',smoothed)
     cv2.imshow('blur',blur)
     cv2.imshow('median blur',blur)
+    cv2.imshow('bilateral blur',bilateral)
 
 
     k=cv2.waitKey(5) & 0xFF
