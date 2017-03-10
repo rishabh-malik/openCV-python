@@ -29,6 +29,7 @@ while True:
     opening= cv2.morphologyEx(mask,cv2.MORPH_OPEN,kernel)
     closing= cv2.morphologyEx(mask,cv2.MORPH_CLOSE,kernel)
     
+    #2 more exist- tophat and blackhat
     
     cv2.imshow('frame',frame)                  
     cv2.imshow('res',res)
