@@ -1,3 +1,4 @@
+#gradient and edges
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -12,7 +13,7 @@ while True:
     sobelx=cv2.Sobel(frame,cv2.CV_64F,1,0,ksize=5)             #horizontal gradient
     sobely=cv2.Sobel(frame,cv2.CV_64F,0,1,ksize=5)             #vertical gradient
 
-    edges=cv2.Canny(frame,100,200)                             
+    edges=cv2.Canny(frame,100,200)                             #to see the edges 
 
     cv2.imshow('orignal',frame)
     cv2.imshow('laplacian',laplacian)
